@@ -16,6 +16,8 @@ figlet  "GERADOR"
 
 echo "*---------------------------------------------------*"
 echo "*[*]SEJA BEM VINDO AO GERADOR DE PAYLOAD[*]         *"
+echo "               [*]create by:paulo(killercrown)[*]      "
+echo "               [*]atualizado:26/02/2018 as 13:42[*]"
 echo "*---------------------------------------------------*"
 echo
 echo -e "${CYAN}*******************************************************************************"
@@ -33,11 +35,17 @@ clear
 echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "           CRIACAO DO PAYLOAD          * "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+echo "AGUARDE!"
+sleep 3
+clear
+
 echo -e "${CYAN}[*]digite o ip interno *ETH0* [*]"
 read interno
-echo "[*]Digite a porta aberta[*] "
+
+echo "[*]Digite a porta aberta[*] \n"
 read porta
-echo "[*]Digite o nome do aplicativo[*] "
+
+echo "[*]Digite o nome do aplicativo[*]"
 read apk
 WHITE="\033[01;37m"
 CLARO="\033[33m"
@@ -55,6 +63,12 @@ fi
 if [ "$opcao" -eq "2" ]
 then
 clear
+echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+echo "           CRIACAO DO PAYLOAD          * "
+echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+echo "AGUARDE!"
+sleep 3
+clear
 echo -e "${RED}[-]WARNING: ESTA OPCAO VAI FUCIONAR COM O SERVICO NGROK[-]"
 echo -e "${CLARO}[+]LIGUE O NGROK USANDO: NGROK TCP 4444(OU OUTRA PORTA)"
 echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU"
@@ -66,4 +80,6 @@ echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 fi
+
+
 
