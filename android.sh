@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "        _________            "
+echo "        |o     o |   " 
+echo "        |________|   "
+echo "        |        |        "
+echo "       /| HACKED | \         "
+echo "      / |        |  \         "
+echo "      \ |        |  /         "
+echo "        |_      _|            "
+echo "          |     |            "
+echo "          |     |             "
+echo "          \/    \/               "
