@@ -1,5 +1,8 @@
 # killercrown
 
-requisitos:
-TER PORTA ABERTA NO ROTEADOR OU MODEM E USAR ELA NO PROGRAMA
-TER O NOIP
+requisitos para usar em rede externa:
+
+
+ter o noip ou ngrok
+
+ter porta aberta
