@@ -83,13 +83,14 @@ clear
 
 
 figlet         OPTIONS
-echo -e "${WHITE}       CRIADOR DE PAYLOAD(ESCOLHA POR NUMERO)                                          "
+echo -e "${WHITE}       CRIADOR DE PAYLOAD(ESCOLHA POR NUMERO) "
+echo -e "${RED}[-]OPCAO 4 E 5 NAO ESTA FUCIONANDO NO MOMENTO[-]"
 echo -e "${RED}   _________________________________________             "
 echo "  |    REDES          |   SISTEMAS  |    VERSION  |                                     "
 echo "  |___________________|_____________|_____________| "
 echo "  |REDE INTERNA       | ANDROID     |0.1|         |[1]"
 echo "  |REDE EXTERNA(NOIP) | ANDROID     |0.5|         |[2]"
-echo "  |REDE EXTENRA(NGROK)| ANDROID     |0.1|  	|[3]"
+echo "  |REDE EXTENRA(NGROK)| ANDROID     |0.1|         |[3]"
 echo "  |REDE INTERNA       | WINDOWS     |0.1|         |[4]"
 echo "  |REDE INTERNA       | LINUX       |0.1|         |[5]    "
 echo "  |  EXIT             |  ()         |0.0|         |[6]"
@@ -97,11 +98,11 @@ echo "  -------------------------------------------------    "
 echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
       read rap
-if [ $rap -eq "5" ] 
+if [ $rap -eq "6" ] 
 then
 exit 0
 fi
-if [ $rap -gt 5 ]
+if [ $rap -gt 6 ]
 then
 	echo "Payload invalido" ; exit 0
 elif [ $rap -lt 1 ]
@@ -243,10 +244,6 @@ echo "ARQUIVO CRIADO COM SUCESSO. DESEJA CONFIGURAR O HANDLER OU IR SAIR? n\y" &
 clear
 if [ $hand == "y" ]
 then
-echo "_________________________________________             |   		"
-echo "|IP OU DOMINIO |PORTA  |NOME APP|PAYLOAD |           |                      "
-echo "|$lhost	     |$lport |$apk    |$PAYLOAD                           |     |                 	"
-echo "|______________|________________|________|      |    	"
 echo -e "${CLARO}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "[+]OBRIGADO POR USAR ESTA FERRAMENTA [+] "
 echo "            PAYLOADS SALVO EM ARQUIVOS"
@@ -265,5 +262,7 @@ echo "APACHE2 DESLIGADO"
 echo "OBRIGADO POR USAR ESTA FERRAMENTA"
 exit 0
 fi
-
-
+if [ $rap -eq "6" ]
+then
+exit 0
+fi
