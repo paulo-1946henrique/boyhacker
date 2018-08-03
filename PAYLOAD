@@ -41,9 +41,9 @@ apt-get install figlet > /dev/null
 echo -e "${NEGRO}"
 echo "____________________________________________________________________________________________"
 sleep 0.1
-echo "    CONTATO WPP: https://api.whatsapp.com/send?phone=+5511957122490&text=ferramenta%20legal"
+echo "    CONTATO WPP: https://bit.ly/2AAngAa"
 sleep 0.1
-echo "    CONTATO FACEBOOK:https://www.facebook.com/killercrownw  "
+echo "    CONTATO FACEBOOK:https://bit.ly/2MeUmqJ "
 sleep 0.1
 echo "               V2.0                                        "
 sleep 0.1
